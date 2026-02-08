@@ -48,10 +48,12 @@ h1:hover {  /* Smooth transition for font size */
   width: 300px; /* Ensure each card is 300px wide */
   height: 200px;
   overflow: hidden;
+  
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   outline: 2px solid #775047;
+  transition: transform 0.2s ease;
 }
 
 /* Card image style */
@@ -71,4 +73,16 @@ h1:hover {  /* Smooth transition for font size */
   background: rgba(62, 39, 35, 0.85);  /* Warm dark overlay */
   color: #FDF6E3;  /* Light text for contrast */
   padding: 0 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-text,
+.card:focus .card-text {
+  opacity: 1;
+}
+
+.card:hover,
+.card:focus {
+  transform: scale(1.03);
 }
